@@ -1,0 +1,321 @@
+<!doctype html>
+<html ng-app="app">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="pt-br" />
+    <title>Blog com angular v1</title>
+
+
+    <!--Bootsrtap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!--Angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+    <!--rotas angular-->
+    <script src="app/app.js"></script>
+    <script src="app/controllers/controller.js"></script>
+    <script src="app/routes/route.js"></script>
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="/root/css/styles.css">
+
+    <style>
+        .politicas {
+            position: fixed;
+            bottom: 15px;
+            left: 15px;
+        }
+        
+        .aviso {
+            background-color: black;
+            color: white;
+            padding: 7px;
+            border-radius: 5px;
+        }
+        
+        .concordar {
+            background-color: white;
+            color: black;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        
+        .none {
+            display: none;
+        }
+        
+        .box-cookies.hide {
+            display: none !important;
+        }
+        
+        .box-cookies {
+            position: fixed;
+            background: rgba(0, 0, 0, .9);
+            width: 100%;
+            z-index: 998;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .box-cookies .msg-cookies,
+        .box-cookies .btn-cookies {
+            text-align: center;
+            padding: 25px;
+            color: #fff;
+            font-size: 18px;
+        }
+        
+        .box-cookies .btn-cookies {
+            background: #1e88e5;
+            cursor: pointer;
+            align-self: normal;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .box-cookies {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#/">
+            
+            Código Front end
+            <!--
+
+                <img src="assets/img/navbar-logo.svg" alt="" />
+            -->
+        </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ml-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">E-book</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="http://bit.ly/marketingDigitalDo0">Aprenda a programar</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#/about">About</a></li>
+
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <div style="background-color: rgba(0, 0, 0, 0.425); border-radius: 20px; padding-top: 20px;padding-bottom: 20px; margin-bottom: 15px;">
+
+                <div class="masthead-subheading">Ebook Ensina: <br> Como criar sites proficionais e ganhar dinheiro com eles </div>
+                <div class="masthead-heading text-uppercase">Download Grátis</div>
+            </div>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/">Download</a>
+        </div>
+    </header>
+    <!-- Services-->
+    <section class="page-section" id="services">
+        <div class="container">
+
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Para Você</h2>
+                <!--
+                <h3 class="section-subheading text-muted">Veja mais sobre:</h3>
+            -->
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-play" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4 0h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H4z"/>
+                        <path d="M6 10.117V5.883a.5.5 0 0 1 .757-.429l3.528 2.117a.5.5 0 0 1 0 .858l-3.528 2.117a.5.5 0 0 1-.757-.43z"/>
+                      </svg>
+                    <!--
+
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    -->
+                    </span>
+                    <h4 class="my-3">Canal </h4>
+                    <p class="text-muted">Assine nosso canal no youtube</p>
+                    <a target="blank" href="https://www.youtube.com/channel/UCd4MhWhSeqK1Ga4OKOPSxSw?view_as=subscriber">Inscreva-se</a>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                    <!--
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        -->
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cloud-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
+                            <path fill-rule="evenodd" d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
+                          </svg>
+                    </span>
+                    <h4 class="my-3">Dowload Grátis</h4>
+                    <p class="text-muted">
+                        E-book ensina <br>
+                        <small>como ganhar dinheiro com site em 5 passos simples rapidamente</small>
+                    </p>
+                    <a target="blank" href="">Download</a>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cash-stack" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 3H1a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1h-1z"/>
+                        <path fill-rule="evenodd" d="M15 5H1v8h14V5zM1 4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H1z"/>
+                        <path d="M13 5a2 2 0 0 0 2 2V5h-2zM3 5a2 2 0 0 1-2 2V5h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 13a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+                      </svg>
+                    <!--
+
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                    -->
+                    </span>
+                    <h4 class="my-3">Curso completo para criar um negocio online do 0</h4>
+                    <p class="text-muted">
+                        Curso recomendado por mim pra você que quer ganhar dinheiro na internet, e trabalhar em casa, eu fiz esse curso e recomendo
+                    </p>
+                    <a target="blank" href="http://bit.ly/marketingdigitaldoresultado">Começe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <div ng-view class="jumbotron text-center"></div>
+
+
+    <!-- Team-->
+    <section class="page-section bg-light" id="team">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Sobre mim</h2>
+                <!--
+                <h3 class="section-subheading text-muted">mais sobre mim</h3>
+            -->
+            </div>
+            <!--
+            <div class="row">
+
+           
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="" />
+                    <h4>Kay Garland</h4>
+                    <p class="text-muted">Lead Designer</p>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="" />
+                    <h4>Larry Parker</h4>
+                    <p class="text-muted">Lead Marketer</p>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+             -->
+            <div class="col-lg-4 mx-auto">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="assets/img/team/a967b10d-86e2-49fd-ae75-46302f0ac58b.jpg" alt="" />
+                    <h4>Carlos Alexandre Leutz</h4>
+                    <p class="text-muted">Analista de Sistemas</p>
+                    <a target="blank" class="btn btn-dark btn-social mx-2" href="https://www.youtube.com/channel/UCd4MhWhSeqK1Ga4OKOPSxSw?view_as=subscriber"><i class="fab fa-youtube"></i></a>
+                    <a target="blank" class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/C%C3%B3digo-Front-end-113262850548838"><i class="fab fa-facebook-f"></i></a>
+                    <a target="blank" class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/carlos-leutz-1b1516185/"><i class="fab fa-linkedin-in"></i></a>
+                    <a target="blank" class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/carlosalexandreleutz/?hl=pt-br"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <!--
+
+            </div>
+        -->
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="large text-muted">
+                        Olá, sou do lindo vale do Itajaí SC, tenho formação em analise e desenvolvimento de sistemas, amo estudar novas tecnologias, astronomia biologia e geologia com o intuito de um dia trabalhar com pesquisa espacial, na parte de programação e claro kkk, trabalhar
+                        com missões espacias e lançamentos de foguetes.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-left">Copyright © Código Front end 2020</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a target="blank" class="btn btn-dark btn-social mx-2" href="https://www.youtube.com/channel/UCd4MhWhSeqK1Ga4OKOPSxSw?view_as=subscriber"><i class="fab fa-youtube"></i></a>
+                    <a target="blank" class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/C%C3%B3digo-Front-end-113262850548838"><i class="fab fa-facebook-f"></i></a>
+                    <a target="blank" class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/carlos-leutz-1b1516185/"><i class="fab fa-linkedin-in"></i></a>
+                    <a target="blank" class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/carlosalexandreleutz/?hl=pt-br"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-right">
+                    <a class="mr-3" href="">Privacy Policy</a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Contact form JS-->
+
+
+    <!-- Core theme JS-->
+
+    <script src="/root/js/scripts.js"></script>
+
+    <!--
+
+        <script>
+            if (!localStorage.pureJavaScriptCookies) {
+                document.querySelector(".box-cookies").classList.remove('hide');
+            }
+            
+            const acceptCookies = () => {
+                document.querySelector(".box-cookies").classList.add('hide');
+                localStorage.setItem("pureJavaScriptCookies", "accept");
+            };
+            
+            const btnCookies = document.querySelector(".btn-cookies");
+            
+            btnCookies.addEventListener('click', acceptCookies);
+        </script>
+        
+    -->
+</body>
+
+</html>
