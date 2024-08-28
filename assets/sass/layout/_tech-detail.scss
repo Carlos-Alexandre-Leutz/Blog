@@ -1,0 +1,10 @@
+
+.tech-detail-section{
+
+    .quotes{
+        border-left: 2px solid $accent-1;
+        background: rgba(22, 152, 187, 0.05);
+        backdrop-filter: blur(30px);
+        padding: clamp(24px, 1.667vw, 40px);
+    }
+}

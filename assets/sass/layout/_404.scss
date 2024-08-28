@@ -1,0 +1,24 @@
+.error-page{
+    padding-top: clamp(64px, 9.948vw, 250px);
+    padding-bottom: clamp(54px, 8.646vw, 220px);
+    @include media-query(1024px){
+        height: 53.15vh;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    @include media-query(820px){
+        height: auto;
+    }
+    .error-wrapper{
+        h2{
+            font-size: clamp(96px, 13.333vw, 400px);
+            font-style: normal;
+            line-height: 120%; /* 720px */
+            letter-spacing: -4px;
+            text-transform: uppercase;
+            -webkit-text-stroke: 3px $accent-1;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}

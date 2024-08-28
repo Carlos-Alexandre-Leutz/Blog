@@ -1,0 +1,42 @@
+
+.testimonials-section{
+    .testimonials-wrapper{
+        background: url('../media/backgrounds/testimonials-bg.png') no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        .slider-arrows{
+            .btn-prev{
+                position: absolute;
+                bottom: 50%;        
+                left: 2%;    
+                transform: translate(0, 50%);    
+            }
+            .btn-next{
+                position: absolute;
+                bottom: 50%;
+                right: 2%;   
+                transform: translate(0, 50%);     
+            }
+        }
+        .testimonials-block{
+            padding: clamp(48px, 3.333vw, 82px) 0;
+            text-align: center;
+            .review-rating-box{
+                padding: 8px 16px;
+                display: inline-flex;
+                align-items: center;
+                gap: $gap-24;
+                background: $accent-1;
+                .parent-box{
+                    .box-1{
+                        display: flex;
+                        align-items: baseline;
+                        gap: $gap-4;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,203 @@
+
+.bg-section-1{
+    background: url("../media/backgrounds/bg-section-1.png") no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    @include media-query(1024px){
+        background-size: cover;
+    }
+}
+
+.bg-section-2{
+    background: url("../media/backgrounds/bg-section-2.png") no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    @include media-query(1024px){
+        background-size: cover;
+    }
+}
+
+.bg-section-3{
+    background: url("../media/backgrounds/bg-section-3.png") no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    @include media-query(1024px){
+        background-size: cover;
+    }
+}
+
+.bg-game-page{
+    background: url("../media/backgrounds/game-page-bg.png") no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    @include media-query(820px){
+        background-size: 150% 100%;
+    }
+    @include media-query(490px){
+        background-size: 300% 100%;
+    }
+}
+
+.bg-game-detail{
+    background: url("../media/backgrounds/game-detail-bg.png") no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    @include media-query(820px){
+        background-size: 150% 100%;
+    }
+    @include media-query(490px){
+        background-size: 300% 100%;
+        background-position: left;
+    }
+}
+
+.bg-tournament-page{
+    background: url("../media/backgrounds/tournament-bg.png") no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    @include media-query(820px){
+        background-size: 150% 100%;
+    }
+    @include media-query(490px){
+        background-size: 360% 100%;
+        background-position: left;
+    }
+}
+
+.bg-live-stream-page{
+    background: url("../media/backgrounds/live-stream-bg.png") no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    @include media-query(820px){
+        background-size: 150% 100%;
+    }
+    @include media-query(490px){
+        background-size: 360% 100%;
+        background-position: left;
+    }
+}
+
+.tech-update-page{
+    background: url("../media/backgrounds/tech-update-bg.png") no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    @include media-query(820px){
+        background-size: 150% 100%;
+    }
+    @include media-query(490px){
+        background-size: 360% 100%;
+        background-position: left;
+    }
+}
+
+.tech-detail-page{
+    background: url("../media/backgrounds/tech-detail-bg.png") no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    @include media-query(820px){
+        background-size: 150% 100%;
+    }
+    @include media-query(490px){
+        background-size: 360% 100%;
+        background-position: left;
+    }
+}
+
+.contact-page{
+    background: url("../media/backgrounds/contact-bg.png") no-repeat;
+    background-attachment: fixed;
+    background-position: 100% -200%;
+    background-size: cover;
+    @include media-query(820px){
+        background-size: 150% 100%;
+    }
+    @include media-query(490px){
+        background-size: 360% 100%;
+        background-position: left;
+    }
+}
+
+.about-page{
+    background: url("../media/backgrounds/about-bg.png") no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    @include media-query(820px){
+        background-size: 150% 100%;
+    }
+    @include media-query(490px){
+        background-size: 360% 100%;
+        background-position: left;
+    }
+}
+
+.tournament-detail-page{
+    background: url("../media/backgrounds/tournament-detail-bg.png") no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    @include media-query(490px){
+        background-position: left;
+    }
+}
+
+.registration-page{
+    background: url("../media/backgrounds/registration-bg.png") no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    @include media-query(490px){
+        background-size: cover;
+        background-position: left;
+    }
+}
+
+.signup-page{
+    background: url("../media/backgrounds/signup-page-bg.png") no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    @include media-query(1024px){
+        background-size: 170% 100%;
+    }
+    @include media-query(820px){
+        background-size: 300% 100%;
+    }
+    @include media-query(490px){
+        background-size: 360% 100%;
+        background-position: left;
+    }
+
+    &.error-page-bg{
+        @include media-query(1024px){
+            background-size: 170% 100%;
+        }
+        @include media-query(820px){
+            background-size: 140% 100%;
+        }
+        @include media-query(490px){
+            background-size: 230% 100%;
+            background-position: top;
+        }
+    }
+}
+
+.hr-line{
+    width: 100%;
+    height: 1px;
+    background: $white;
+}
+.vr-line{
+    height: 100%;
+    width: 1px;
+    background: $white;
+}

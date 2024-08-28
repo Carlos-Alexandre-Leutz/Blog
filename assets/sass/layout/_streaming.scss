@@ -1,0 +1,88 @@
+.live-streaming-nav{
+    .nav {
+        display: inline-flex;
+        justify-content: center;
+        gap: $gap-24;
+        row-gap: 24px;
+        border: 0px;
+        position: relative;
+        width: 100%;
+    
+        @include media-query(452px) {
+            gap: 16px;
+        }
+        
+        .nav-item {
+            .nav-link {
+                color: $light-gray;
+                font-family: $font-primary;
+                font-size: clamp(16px, 0.938vw, 22px);
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+                border: 0px;
+                border-radius: 0;
+                padding: clamp(8px, 0.625vw, 20px) clamp(24px, 1.667vw, 48px);
+                border: 1px solid $dark-gray;
+                background: transparent;
+                position: relative;
+                transition: $transition;
+    
+                &.active {
+                    border: 1px solid $accent-1;
+                    color: $white;
+                    transition: $transition;
+                    background: $accent-1;
+                }
+                
+                &:hover {
+                    border: 1px solid $accent-1;
+                    color: $white;
+                    transition: $transition;
+                    background: $accent-1;
+                }
+            }
+        }
+    }
+}
+.streaming-block{
+    .streaming-image{
+        position: relative;
+        .live-label{
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            color: $white;
+            background: $accent-1;
+            padding: clamp(5px, 0.417vw, 12px) clamp(10px, 0.833vw, 24px);
+        }
+    }
+    .streaming-content{
+        padding: clamp(10px, 0.833vw, 24px);
+        background: rgba(22, 152, 187, 0.05);
+        backdrop-filter: blur(30px);
+        transition: $transition;
+        h4,h6{
+            transition: $transition;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            line-clamp: 1; 
+            -webkit-box-orient: vertical;
+        }
+        .streamer{
+            width: clamp(56px, 3.75vw, 96px);
+            height: clamp(56px, 3.75vw, 96px);
+        }
+    }
+    &:hover{
+        .streaming-content{
+            transform: translateY(-16px);
+            transition: $transition;
+            h4{
+                color: $accent-4;
+                transition: $transition;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+
+.contact-us-warpper{
+    .contact-container{
+        padding: clamp(24px, 4.167vw, 120px) clamp(16px, 5vw, 160px);
+        @include media-query(490px){
+            padding: 0;
+        }
+        .contact-input-form{
+            background: rgba(22, 152, 187, 0.05);
+            backdrop-filter: blur(30px);
+            padding: clamp(20px, 1.667vw, 48px);
+        }   
+    }
+}

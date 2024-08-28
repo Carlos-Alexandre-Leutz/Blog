@@ -1,0 +1,23 @@
+
+.signup-wrapper{
+    .signup-container{
+        padding: clamp(12px, 1.25vw, 40px);
+        .media-link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background: #021627;
+            transition: $transition;
+            padding: clamp(8px, 0.625vw, 32px) clamp(16px, 1.25vw, 40px);
+            img{
+                width: clamp(24px, 1.667vw, 48px);
+                height: clamp(24px, 1.667vw, 48px);
+            }
+            &:hover{
+                background: $lightest-gray;
+                transition: $transition;
+            }
+        }
+    }
+}

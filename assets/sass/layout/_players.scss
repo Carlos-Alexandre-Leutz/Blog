@@ -1,0 +1,39 @@
+.player-card-slider{
+    margin: 0 -12px;
+}
+.player-card{
+    background: rgba(22, 152, 187, 0.05);
+    backdrop-filter: blur(30px);
+    padding: clamp(10px, 0.833vw, 32px);
+    margin: 0 12px;
+
+    .card-topbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .player-name{
+            display: flex;
+            align-items: center;
+            gap: $gap-8;
+            @include media-query(1024px){
+                gap: $gap-16;
+            }
+            img{
+                width: clamp(64px, 5vw, 180px);
+                height: clamp(64px, 5vw, 180px);
+            }
+        }
+    }
+    .card-detail{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .rating-star{
+            svg{
+                width: clamp(16px, 1.25vw, 32px);
+                height: clamp(16px, 1.25vw, 32px);
+            }
+        }
+    }
+}
+

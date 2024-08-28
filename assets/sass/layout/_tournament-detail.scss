@@ -1,0 +1,88 @@
+
+.tournament-groups-section{
+    
+    .group-block{
+        padding: clamp(8px, 0.625vw, 20px) clamp(16px, 1.25vw, 40px);
+        background: rgba(22, 152, 187, 0.05);
+        backdrop-filter: blur(30px);
+        display: flex;
+        align-items: center;
+        gap: $gap-12;
+        img{
+            width: clamp(48px, 3.333vw, 96px);
+            height: clamp(48px, 3.333vw, 96px);
+        }
+        h6{
+            color: $light-gray;
+            font-weight: 500;
+        }
+
+    }
+
+    .faq-block {
+        padding: 17.75px 16px;
+        padding-right: 26px;
+        background: rgba(22, 152, 187, 0.05);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(30px);
+        border-radius: $br-4;
+        margin-bottom: clamp(12px, 1.25vw, 32px);
+        padding-right: 32px;
+
+        .accordion-button {
+            margin: 0;
+            position: relative;
+            padding: 0;
+            font-family: $font-primary;
+            font-weight: 400;
+            font-size: clamp(16px, 0.938vw, 20px); /* 18px */
+            line-height: 120%;
+            padding-right: 32px;
+
+            @include media-query(490px){
+                padding-right: 40px;
+            }
+            &.collapsed {
+                border-radius: 0px;
+                padding: 0;
+                background: none;
+                margin: 0;
+                @include media-query(490px){
+                    padding-right: 40px;
+                }
+                
+
+                &::after {
+                    background-image: none !important;
+                    color: $light-gray;
+                    content: "\f067";
+                    font-family: $font-awesome;
+                }
+            }
+
+            &:not(.collapsed) {
+                color: $white;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+            }
+
+            &:focus {
+                border: none;
+                box-shadow: none;
+            }
+
+            &::after {
+                content: "\f068";
+                font-family: $font-awesome;
+                background-image: none !important;
+                position: absolute;
+                right: -16px;
+                font-weight: 300;
+                font-size: 24px;
+                cursor: pointer;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,158 @@
+.tournament-nav{
+    .nav {
+        display: inline-flex;
+        justify-content: center;
+        gap: $gap-24;
+        row-gap: 24px;
+        border: 0px;
+        position: relative;
+        width: 100%;
+    
+        @include media-query(452px) {
+            gap: 16px;
+        }
+        
+        .nav-item {
+            .nav-link {
+                color: $light-gray;
+                font-family: $font-primary;
+                font-size: clamp(16px, 0.938vw, 22px);
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+                border: 0px;
+                border-radius: 0;
+                padding: clamp(8px, 0.625vw, 20px) clamp(24px, 1.667vw, 48px);
+                border: 1px solid $dark-gray;
+                background: transparent;
+                position: relative;
+                transition: $transition;
+    
+                &.active {
+                    border: 1px solid $accent-1;
+                    color: $accent-1;
+                    transition: $transition;
+                }
+                
+                &:hover {
+                    border: 1px solid $accent-1;
+                    color: $accent-1;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+}
+
+.tournament-card{
+    position: relative;
+    .tournament-image{
+        overflow: hidden;
+        position: relative;
+        &.shine {
+            &::before {
+              background: linear-gradient(
+                to right,
+                fade_out(#fff, 1) 0%,
+                fade_out(#fff, 0.7) 100%
+              );
+              content: "";
+              display: block;
+              height: 100%;
+              left: -90%;
+              position: absolute;
+              top: 0;
+              transform: skewX(25deg);
+              width: 30%;
+              z-index: 2;
+              pointer-events: none;
+            }
+      
+            @keyframes shine {
+              100% {
+                left: 125%;
+              }
+            }
+        }
+        img{
+            -webkit-transition: all 0.35s linear 0s;
+            transition: all 0.35s linear 0s;
+        }
+    }
+    .tournament-content{
+        padding: clamp(12px, 0.833vw, 32px);
+        background: rgba(22, 152, 187, 0.05);
+        backdrop-filter: blur(30px);
+        h4{
+            transition: $transition;
+        }
+        .tag-bar{
+            display: flex;
+            align-items: center;
+            gap: $gap-24;
+            
+            @include media-query(1024px){
+                flex-wrap: wrap;
+            }
+
+            .tag-box{
+                padding: 4px 8px;
+                border: 1px solid $accent-1;
+            }
+        }
+        .functional-bar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .bar-1{
+                display: flex;
+                align-items: center;
+                gap: $gap-24;
+                .icon-box{
+                    display: flex;
+                    align-items: center;
+                    gap: $gap-8;
+                }
+            }
+            .circle-button{
+                width: clamp(32px, 2.5vw, 64px);
+                height: clamp(32px, 2.5vw, 64px);
+                border-radius: 50%;
+                background: $accent-1;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                transition: $transition;
+            }
+        }
+    }
+    &:hover{
+        .tournament-image{
+            &.shine {
+                &:hover,
+                &:focus {
+                  &::before {
+                    animation: shine 0.65s;
+                  }
+                }
+            }
+            img{
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+                -webkit-transition: all 0.35s linear 0s;
+                transition: all 0.35s linear 0s;
+            }
+        }
+        .tournament-content{
+            h4{
+                transition: $transition;
+                color: $accent-4;
+            }
+            .circle-button{
+                transition: $transition;
+                transform: rotate(-45deg);
+                box-shadow: 0 0 5px $accent-1;
+            }
+        }
+    }
+}

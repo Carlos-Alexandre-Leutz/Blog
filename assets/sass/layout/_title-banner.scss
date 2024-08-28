@@ -1,0 +1,24 @@
+.title-banner{
+    .title-wrapper{
+        display: flex;
+        align-items: center;
+        gap: $gap-24;
+        @include media-query(490px){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .game-logo{
+            width: 15.208vw;
+            @include media-query(490px){
+                width: 25%;
+            }
+        }
+        .content-box{
+            .game-label{
+                display: inline-block;
+                padding: 8px clamp(24px, 1.667vw, 64px);
+                border: 1px solid $white;
+            }
+        }
+    }
+}

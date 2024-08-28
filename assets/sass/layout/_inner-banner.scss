@@ -1,0 +1,77 @@
+
+.signup-banner{
+    .inner-banner-wrapper{
+        background: url("../media/backgrounds/signup-bg.png") no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        padding: 7.813vw 0;
+        @include media-query(490px){
+            background-size: cover;
+        }
+        &.inner-banner-2{
+            background: url("../media/backgrounds/inner-banner-2.png") no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            padding: clamp(48px, 4.167vw, 120px) 16px;
+            @include media-query(490px){
+                background-size: cover;
+            }
+        }
+    }
+}
+
+.coming-soon-banner{
+    .coming-soon-wrapper{
+        background: url("../media/backgrounds/inner-banner-2.png") no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        padding: clamp(32px, 3.646vw, 96px) 0;
+        @include media-query(490px){
+            background-size: cover;
+        }
+        
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: clamp(6px, 0.833vw, 24px);
+
+            li {
+                width: clamp(96px, 13.958vw, 240px);
+                height: clamp(72px, 6.823vw, 180px);
+                border-radius: 0;
+                background: $accent-1;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                @include media-query(490px){
+                    width: 68px;
+                    height: 68px;
+                }
+
+                h6{
+                    color: $white;
+                    font-family: $font-sec;
+                    font-size: clamp(20px, 1.198vw, 32px); /* 23px */
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%; /* 27.6px */
+
+                    @include media-query(1199px) {
+                        font-size: clamp(21px, 1.918vw, 28px); /* 23px */
+                    }
+
+                    @include media-query(820px) {
+                        font-size: clamp(18px, 2.317vw, 21px); /* 19px */
+                    }
+                }
+
+            }
+        }
+        .user-icon{
+            width: clamp(20px, 1.667vw, 48px);
+            height: clamp(20px, 1.667vw, 48px);
+        }
+    }
+}

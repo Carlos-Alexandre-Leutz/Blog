@@ -1,0 +1,51 @@
+
+.benefits-section{
+
+    .benefit-block{
+        background: rgba(22, 152, 187, 0.05);
+        backdrop-filter: blur(30px);
+        padding: clamp(12px, 1.25vw, 40px);
+        text-align: center;
+        border: 1px solid $light-black;
+        
+        .image-box{
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            width: clamp(72px, 5.208vw, 150px);
+            height: clamp(72px, 5.208vw, 150px);
+            background: transparent;
+            border-radius: 50%;
+            border: 1px solid $dark-gray;
+            transition: $transition;
+            
+            svg{
+                width: clamp(32px, 2.5vw, 64px);
+                height: clamp(32px, 2.5vw, 64px);
+                
+                path{
+                    transition: $transition
+                }
+            }
+        }
+        .content-box{
+            h6{
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                line-clamp: 1; 
+                -webkit-box-orient: vertical;
+            }
+        }
+        &:hover{
+            cursor: text;
+            .image-box{
+                border: 1px solid $accent-1;
+                background: $accent-1;
+                transition: $transition;
+            }
+        }
+    }
+}

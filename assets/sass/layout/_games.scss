@@ -1,0 +1,82 @@
+.game-card {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+
+  .game-image {
+    position: relative;
+    height: 100%;
+    &.shine {
+      &::before {
+        background: linear-gradient(
+          to right,
+          fade_out(#fff, 1) 0%,
+          fade_out(#fff, 0.7) 100%
+        );
+        content: "";
+        display: block;
+        height: 100%;
+        left: -90%;
+        position: absolute;
+        top: 0;
+        transform: skewX(25deg);
+        width: 30%;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      @keyframes shine {
+        100% {
+          left: 125%;
+        }
+      }
+    }
+    img {
+      height: 100%;
+      -webkit-transition: all 0.35s linear 0s;
+      transition: all 0.35s linear 0s;
+    }
+  }
+  .game-content {
+    width: 95%;
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    h4 {
+      transition: $transition;
+    }
+    .review-box {
+      .box-1 {
+        display: flex;
+        align-items: baseline;
+        gap: $gap-4;
+      }
+    }
+  }
+  &:hover {
+    transition: $transition;
+    box-shadow: 0px 60px 46px -60px $accent-1;
+    .game-image {
+      img {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        -webkit-transition: all 0.35s linear 0s;
+        transition: all 0.35s linear 0s;
+      }
+      &.shine {
+        &:hover,
+        &:focus {
+          &::before {
+            animation: shine 0.65s;
+          }
+        }
+      }
+    }
+    .game-content {
+      h4 {
+        transition: $transition;
+        color: #FFB930;
+      }
+    }
+  }
+}

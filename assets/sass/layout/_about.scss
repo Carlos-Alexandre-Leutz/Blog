@@ -1,0 +1,21 @@
+
+.about-us-section{
+    .about-container{
+        background: rgba(22, 152, 187, 0.05);
+        backdrop-filter: blur(30px);
+        padding: clamp(16px, 2.5vw, 64px);
+    }
+    .team-container{
+        .team-member-block{
+            position: relative;
+            .image-box{
+                height: 100%;
+            }
+            .content-box{
+                position: absolute;
+                bottom: 16px;
+                left: 16px;
+            }
+        }
+    }
+}

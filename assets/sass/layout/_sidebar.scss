@@ -1,0 +1,21 @@
+.tech-sidebar{
+    background: rgba(22, 152, 187, 0.05);
+    backdrop-filter: blur(3px);
+    padding: clamp(12px, 1.25vw, 40px);
+    form{
+        position: relative;
+        border: 1px solid $white;
+        border-radius: 0;
+       
+        button{
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            background: transparent;
+            border: 0;
+            i{
+                color: $white;
+            }
+        }
+    }
+}
